@@ -1,47 +1,73 @@
 Разработване на background processing за обработка и REST API за предоставяне на демографски
 данни
 
+
 Изисквания:
+
    • Да се разработи background processing за обработка и извличане на демографски данни
      от REST WebService и записване на резултатите (статистиката).
+     
         o Да се използва REST WebService за достъп до демографски данни на база общини
           (USA_Counties). Endpoint на услугата е налична в края на документа.
+          
         o Да се има предвид че background processing-ът ще се изпълнява периодично за
           хипотетично обновяване на резултатите с актуална информация.
+          
         o Обработените резултати да съдържат сума на населението (поле POPULATION) на
           ниво щат (поле STATE_NAME).
+          
         o Програмен език: по преценка на кандидата (C#, Java, Python, JavaScript или друг).
+        
         o Технология на съхраняване на резултата: по преценка на кандидата (релационна
           база от данни, нерелационна база от данни, файл или друго).
+          
         o Подход при реализиране на периодично изпълнение: по преценка на кандидата.
+        
    • Да се разработи REST WebService, който да предоставя обработените и записани
      резултати.
+     
         o Да се поддържа request за получаване на всички записани резултати (население
           за всеки от щатите).
+          
         o Да е възможно филтриране на резултата по име на щат (поле STATE_NAME).
+        
         o Програмен език: по преценка на кандидата (C#, Java, Python, JavaScript или друг).
+        
 
 Предимство са следните направления (редът няма значение):
+
    • заложени основи за възможност и лесно надграждане на функционалността.
+   
    • лесно четим, самодокументиращ се код, спазващ общоприетите добри практики в
      програмирането.
+     
    • bug free реализация.
+   
    • Решение, което позволява висока скалируемост, баланс на натоварването.
+   
    • заложени основи за преизползване на разработените компоненти.
+   
    • заложени основи за лесна поддръжка, диагностика и отстраняване на проблеми във
      бъдеще.
+     
    • просто (минималистично) и елегантно решение.
+   
    • аргументиран избор на използваните технологии.
+   
    • решение, което дава свобода на приложение. Например (но не само):
      мултиплатформеност.
+     
 
 Адрес на услугата, от която да се извличат данните:
-https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties/FeatureServer/
-0/
+
+https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties/FeatureServer/0/
+
 
 Примерна заявка:
-https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties/FeatureServer/
-0//query?where=1%3D1&outFields=population%2C+state_name&returnGeometry=false&f=pjson
+
+https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties/FeatureServer/0//query?where=1%3D1&outFields=population%2C+state_name&returnGeometry=false&f=pjson
+
 
 Документация за консумирането на картна услуга:
+
 https://developers.arcgis.com/rest/services-reference/enterprise/query-map-service-layer-.htm
