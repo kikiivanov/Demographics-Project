@@ -1,4 +1,4 @@
-/*CREATE TABLE demographics_db;*/
+/*CREATE DATABASE demographics_db;*/
 
 USE demographics_db;
 
